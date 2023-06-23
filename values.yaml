@@ -644,7 +644,7 @@ ingress:
   ##
   extraPaths: 
   - path: /examples
-    backend:
+    frontend:
       service:
         name: webhook-eventsource-svc
         port: 12000
