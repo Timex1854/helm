@@ -646,7 +646,7 @@ ingress:
   - path: /
     backend:
       service:
-        name: 10.96.74.100
+        name: webhook-eventsource-svc
         portName: hook 
   
     pathType: ImplementationSpecific
