@@ -71,28 +71,3 @@ spec:
 {{- end }}
 
 
-
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  labels:
-    app.kubernetes.io/instance: app
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: nginx
-    argocd.argoproj.io/instance: app
-    helm.sh/chart: nginx-15.0.1
-  name: app-nginx2
-  namespace: argo-events
-spec:
-  rules:
-  - host: mydnsfordevops.pagekite.me
-    http:
-      paths:
-      - backend:
-          service:
-            name: webhook-eventsource-svc
-            port:
-              name: example
-        path: /example
-        pathType: ImplementationSpecific
-    
