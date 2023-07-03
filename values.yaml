@@ -646,7 +646,7 @@ ingress:
   - path: /hook
     backend:
       service:
-        namespace: argo-events
+        # namespace: argo-events
         name: webhook-eventsource-svc
         ports:                                                                                                                                                                                                        
         - port: 12000                                                                                                                                                                                                 
