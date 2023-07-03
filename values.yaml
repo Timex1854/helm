@@ -759,7 +759,7 @@ healthIngress:
   ## This is supported in Kubernetes 1.18+ and required if you have more than one IngressClass marked as the default for your cluster .
   ## ref: https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/
   ##
-  ingressClassName: ingress
+  ingressClassName: ""
   ## @param healthIngress.extraRules The list of additional rules to be added to this ingress record. Evaluated as a template
   ## Useful when looking for additional customization, such as using different backend
   ##
