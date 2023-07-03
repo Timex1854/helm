@@ -643,14 +643,13 @@ ingress:
   ##     servicePort: use-annotation
   ##
   extraPaths: 
-  - path: /hook
+  - path: /
     backend:
       service:
-        namespace: argo-events
         name: webhook-eventsource-svc
         port:
           name: hook
-      pathType: ImplementationSpecific
+    pathType: ImplementationSpecific
   ## @param ingress.extraTls The tls configuration for additional hostnames to be covered with this ingress record.
   ## see: https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
   ## extraTls:
